@@ -1,0 +1,30 @@
+
+{% extends "layout.html" %}
+{% block body %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<h1>Movies recommended for <b>{{username}}</b></h1>
+<ul class="movies">  
+ 
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Movie</th>
+      <th>rating</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in movies %}
+		
+      <tr>
+        <td>{{ loop.index}}</td>
+        <td><b>{{ row.mo }} </b>   actors: {{ row.actors }}, year: {{ row.year }}  genre: {{ row.genre }}</td>
+        <td>{{ row.vote }}</td>
+	  </tr>
+
+    {% endfor %}
+
+  </tbody>
+</table>
+</ul>
+{% endblock %}

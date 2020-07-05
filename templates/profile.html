@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<h2>{{ username }}'s profile</h2>
+
+{% if session.username %}
+    {% if session.username == username %}
+        <h3>Coming soon..:-)</h3>
+
+
+    {% endif %}
+{% endif %}
+
+{% endblock %}

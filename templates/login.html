@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recommender app</title>
+ 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+  </head>
+ 
+  <body>
+ 
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="{{ url_for('main') }}">Home</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Movie Recommender System</h3>
+      </div>
+
+{% block body %}
+  <h2>Login</h2>
+	<form action="{{ url_for('showSignIn') }}" method="post">
+        <dl>
+            <dt>Username:</dt>
+            <dd><input type="text" name="inputName"></dd>
+            <dt>Password:</dt>
+            <dd><input type="password" name="inputPassword"></dd>
+        </dl>
+        <input type="submit" value="Login">
+	</form>
+{% endblock %}
+	
+  <footer class="footer">
+        <p>&copy; Team barthe-saif dstides20</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>

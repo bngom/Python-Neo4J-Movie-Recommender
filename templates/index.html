@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Movie Recommander</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+		{% extends "layout.html" %}
+		{% block body %}
+        <div class="jumbotron">
+			{% if not session.username %}
+			<h1>US 90's Movie Recommander System</h1>
+			<p><a class="btn btn-lg btn-success" href="showSignIn" role="button">Sign in</a></p>
+            <p><a class="presentation" href="showSignUp" role="button">Sign up today</a></p>
+			{% endif %}
+			{% if session.username %}
+			<h3>Welcome <b>{{ session.username }}</b>!</h3>
+			<br>	
+			<center>
+			<p><a class="btn btn-lg btn-success" href="engine" role="button">Movies recommended to me</a></p>
+			</center>
+			{% endif %}
+        </div>
+		
+		<h3>Top US movies from 90's</h3>
+		
+		{% include "top_10_movies.html" %}
+
+		{% endblock %}
+ 
+        <footer class="footer">
+            <p>&copy; barthe-Saif des20</p>
+        </footer>
+ 
+    </div>
+
+</body>
+ 
+</html>

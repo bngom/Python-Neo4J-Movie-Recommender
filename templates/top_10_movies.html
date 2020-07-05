@@ -1,0 +1,26 @@
+{{ pagination.info }}
+{{ pagination.links }}
+ <ul class="movies">  
+ 
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Movie</th>
+      <th>rating</th>
+	  <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in movies %}
+      <tr>
+        <td>{{ loop.index + pagination.skip }}</td>
+        <td><b>{{ row.m.name }} </b>   actors: {{ row.actors }} year: {{ row.m.released }}  genre: {{ row.m.genre }} </td>
+        <td>{{ row.m.avg_vote }}</td>
+		<td>{% if session.username %}<a href="{{ url_for('like_movie', movieId=row.m.movieId) }}" text-align="left">like</a>{% endif %}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</ul>
+{{ pagination.links }}

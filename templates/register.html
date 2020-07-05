@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Recommender app</title>
+ 
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+  </head>
+ 
+  <body>
+ 
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" ><a href="{{ url_for('main') }}">back</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Movie Recommender System</h3>
+      </div>
+ 
+      <br>
+        <h1>Register</h1>
+        <form action="{{ url_for('showSignUp') }}" method="post">
+			<label for="inputName" class="sr-only">Username</label>
+			<input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+			<br>
+			<label for="inputEmail" class="sr-only">Email address</label>
+			<input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+			<br>
+			<label for="inputPassword" class="sr-only">Password</label>
+			<input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+			<br>
+			<button id="btnSignUp" class="btn-primary" type="submit" value="Register">Sign up</button>
+      </form>
+      
+ 
+       
+ 
+      <footer class="footer">
+        <p>&copy; barthe-saif - dstides20</p>
+      </footer>
+ 
+    </div>
+  </body>
+</html>
