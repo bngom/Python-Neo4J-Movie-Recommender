@@ -7,14 +7,14 @@ Make sure **Neo4j** is running first!
 
 Mke sure **Model creation** steps are effective. View `Imdb_Movies.html` file.
 
-**If you're on Neo4j >= 2.2, make sure to set environment variables `NEO4J_USERNAME` and `NEO4J_PASSWORD`
-to your username and password, respectively:**
+Make sure to set environment variables `NEO4J_USERNAME` and `NEO4J_PASSWORD`
+to your username and password, respectively:
 
-On windows:
+* On windows:
 
 ![env](img/env.png)
 
-On linux:
+* On linux:
 
 ```
 $ export NEO4J_USERNAME=username
