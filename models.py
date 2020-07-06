@@ -160,10 +160,11 @@ def get_movies(skip, per_page):
           '''
 
     query2 = '''
-              MATCH (m:Movie)-[:RELEASED_COUNTRY]->(c:Country {name:'USA'})
-              WHERE 1990 <= m.released < 2000
-              RETURN m
-              ORDER BY m.avg_vote DESC
+          MATCH (m:Movie)-[:RELEASED_COUNTRY]->(c:Country {name:'USA'}), (m)<-[:ACTED_IN]-(actors)
+          WHERE 1990 <= m.released < 2000
+          WITH REDUCE(mergedString = "",word IN m.actors | mergedString+word+',') as actors, m 
+          RETURN DISTINCT m, LEFT(actors,SIZE(actors)-1) as actors
+          ORDER BY m.avg_vote DESC
               '''
     results = graph.run(query, skip=skip, per_page=per_page)
     rec = graph.run(query2)  # Refactor with a deep copy of results
