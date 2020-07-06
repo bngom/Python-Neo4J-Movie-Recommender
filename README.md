@@ -5,16 +5,16 @@ A little [flask](https://palletsprojects.com/p/flask/) application with [Neo4j](
 
 Make sure **Neo4j** is running first!
 
-Mke sure **Model creation** steps are effective. View `Imdb_Movies.html` file.
+Make sure **Model creation** steps are effective. View `Imdb_Movies.html` file.
 
-**If you're on Neo4j >= 2.2, make sure to set environment variables `NEO4J_USERNAME` and `NEO4J_PASSWORD`
-to your username and password, respectively:**
+Make sure to set environment variables `NEO4J_USERNAME` and `NEO4J_PASSWORD`
+to your username and password, respectively:
 
-On windows:
+* On windows:
 
 ![env](img/env.png)
 
-On linux:
+* On linux:
 
 ```
 $ export NEO4J_USERNAME=username
@@ -28,16 +28,16 @@ Then:
 ```
 git clone https://github.com/bngom/Movie-Recommender-Engine.git
 cd Movie-Recommender-Engine
-pip install virtualenv
+pip install virtualenv # You may need to add the installation folder into your PATH environment variable
 virtualenv neoenv
-source neoenv/bin/activate
+neoenv\Scripts\activate.bat 
 pip install -r requirements.txt
 python app.py
 ```
 
 [http://localhost:5000](http://localhost:5000)
 
-The principal page shows a list of US movies from 90’s. This is a simple recommendation based on popularity of the movies. This list is fetched from Neo4j.
+The main page shows a list of US movies from 90’s. This is a simple recommendation based on popularity of the movies. This list is fetched from Neo4j.
 The pagination shows only 20 movies per page, you can navigate through the list. 
 You can log in or register to the application.  On registration the users are directly created in Neo4J.
 
