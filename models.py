@@ -13,8 +13,7 @@ url = os.environ.get('GRAPHENEDB_URL', 'http://localhost:7474')
 username = os.getenv('NEO4J_USERNAME')
 password = os.getenv('NEO4J_PASSWORD')
 
-graph = Graph(url + '/db/data/', username=str.strip(username), password=str.strip(password))
-
+graph = Graph(url + '/db/data/', username=username, password=password)
 class User:
     def __init__(self, username):
         self.username = username
@@ -30,7 +29,7 @@ class User:
             for item in result:
                 return item['a.name'], item['a.password']
         else:
-            return result
+            return None, None
 
     def register(self, password):
         """Register a user in the application
@@ -54,14 +53,13 @@ class User:
         :returns
             - return True if succeeded
             - return false if failed"""
-
-        user, pwd = self.find()
-        print(user)
+        try:
+            user, pwd = self.find()
+        except TypeError as e:
+            user = None
 
         if user is not None:
             return bcrypt.verify(password, pwd)
-            #print(user)
-            #return True
         else:
             return False
 
