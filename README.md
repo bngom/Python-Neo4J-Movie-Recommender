@@ -67,7 +67,7 @@ Once logged in the user will have a new option to Like a movie.
 
 When a user Like a movie a relation (User)-[:LIKED]->(Movie) is generated in Neo4j.
 
-![relation](img/relation.png)
+![relation](img/usernode.png)
 
 Based on the genre of the movies liked by the user, a recommendation is generated. 
 Click again on the button `Movies recommended to me`.
