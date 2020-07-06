@@ -3,7 +3,7 @@ A little [flask](https://palletsprojects.com/p/flask/) application with [Neo4j](
 
 ## Usage
 
-This app is build on **python 3.7**
+This app is build on **python 3.7.7**
 
 Make sure **Neo4j** is running first!
 
