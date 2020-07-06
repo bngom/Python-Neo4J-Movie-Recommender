@@ -5,7 +5,7 @@ A little [flask](https://palletsprojects.com/p/flask/) application with [Neo4j](
 
 Make sure **Neo4j** is running first!
 
-Make sure **Model creation** steps are effective. View `Imdb_Movies.html` file.
+Make sure **Model creation** steps are effective. View `ImdbMovies.md` file.
 
 Make sure to set environment variables `NEO4J_USERNAME` and `NEO4J_PASSWORD`
 to your username and password, respectively:
