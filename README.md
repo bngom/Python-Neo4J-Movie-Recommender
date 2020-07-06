@@ -28,9 +28,9 @@ Then:
 ```
 git clone https://github.com/bngom/Movie-Recommender-Engine.git
 cd Movie-Recommender-Engine
-pip install virtualenv
+pip install virtualenv # You may need to add the installation folder into your PATH environment variable
 virtualenv neoenv
-neoenv\Scripts\activate.bat # source neoenv/bin/activate 
+neoenv\Scripts\activate.bat 
 pip install -r requirements.txt
 python app.py
 ```
