@@ -81,4 +81,5 @@ This also does not tackle when there is an unknown category of movies.
 All these are points of amelioration that could be deployed.
 
 
-
+> Many thanks to Nicole White for her great tutorial that inspired us a lot.
+https://neo4j.com/blog/building-python-web-application-using-flask-neo4j/
