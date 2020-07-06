@@ -34,7 +34,7 @@ neoenv\Scripts\activate.bat
 pip install -r requirements.txt
 python app.py
 ```
-
+## The application
 [http://localhost:5000](http://localhost:5000)
 
 The main page shows a list of US movies from 90’s. This is a simple recommendation based on popularity of the movies. This list is fetched from Neo4j.
@@ -43,7 +43,7 @@ You can log in or register to the application.  On registration the users are di
 
 ![index](img/index.png)
 
-Register a user
+* Register a user
 
 ![register](img/register.png)
 
