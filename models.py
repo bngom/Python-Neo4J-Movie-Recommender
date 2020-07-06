@@ -165,7 +165,8 @@ def get_movies(skip, per_page):
           WITH REDUCE(mergedString = "",word IN m.actors | mergedString+word+',') as actors, m 
           RETURN DISTINCT m, LEFT(actors,SIZE(actors)-1) as actors
           ORDER BY m.avg_vote DESC
-              '''
+          '''
+    
     results = graph.run(query, skip=skip, per_page=per_page)
     rec = graph.run(query2)  # Refactor with a deep copy of results
     rec = [record for record in rec.data()]
