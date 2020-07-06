@@ -65,7 +65,7 @@ Once logged in the user will have a new option to Like a movie.
 
 ![like](img/like.png)
 
-When a user Like a movie a relation (User)-[:LIKED]->(Movie) is generated in Neo4j.
+When a user Like a movie a relation `(User)-[:LIKED]->(Movie)` is generated in Neo4j.
 
 ![relation](img/userliked.PNG)
 
