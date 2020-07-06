@@ -7,7 +7,7 @@ This app is build on **python 3.7.7**
 
 Make sure **Neo4j** is running first!
 
-Make sure **Model creation** steps are effective. View `ImdbMovies.md` file.
+Make sure **Model creation** steps for the database are done. View `ImdbMovies.md` file.
 
 Make sure to set environment variables `NEO4J_USERNAME` and `NEO4J_PASSWORD`
 to your username and password, respectively:
