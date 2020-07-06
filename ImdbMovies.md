@@ -9,7 +9,7 @@ https://github.com/bngom/Movie-Recommender-Engine.git
 
   
 
-##**Project description**
+## **Project description**
 
 **IMDb** is the world's most popular and authoritative source for movie, TV and celebrity content. The objective of this study is to explore datasets from IMDb using **Neo4j** in order to get insights from the Data. We will then buil a [movie recommender](https://github.com/bngom/Movie-Recommender-Engine.git) application with **python** based on movies that people liked.
 
@@ -18,12 +18,12 @@ The dataset we work on is `IMDb movies extensive dataset` found at: *https://www
 
 To get insights we are going to import, model, preprocess the data. We will use powerfull technics that Neo4j provides us to leverage data and relationship between data.
 
-##**Model creation**
+## **Model creation**
 
 In the following section we are going to process our data in order to create a model. Neo4j offers a powerfull syntax that allow us to perform complex queries with  few lines of code. The code to create Node and relation creation are in some part in this study nested. We will explain for each part what the query perfoms in detail.
 
 
-####**Memory Management**
+#### **Memory Management**
 
 > In the following section we assume that you  created a database in *Neo4j desktop* and apply recommanded parameter on your setting file. To get recommanded parameter :
 1.   Open the *Neo4j desktop terminal*
@@ -33,7 +33,7 @@ In the following section we are going to process our data in order to create a m
  
 ![alt text](https://drive.google.com/uc?export=view&id=1dJPWVQ6yWSYUvfpwz5_4x4AKgO8tOfNK)
 
-####**The datasets**
+#### **The datasets**
 
 
 The data are contained in four files - `IMDb-movies.csv`, `IMDb-names.csv`, `IMDb-ratings.csv` and `IMDb-title_principals.csv`.
@@ -54,7 +54,7 @@ The data are contained in four files - `IMDb-movies.csv`, `IMDb-names.csv`, `IMD
 
 > *This file contains the role of each person(actor, director, producer) corresponding to each movie. This is categorized using the 'imdb_title_id' and 'imdb_name_id' from the other files. These keys are used to map through out the dataset.*
 
-####**Constraints and indexes**
+#### **Constraints and indexes**
 In this section we will create unique property constraints and indexes for faster processing of queries. 
 Unique property constraints ensure that property values are unique for all nodes with a specific label.
 
@@ -327,7 +327,7 @@ RETURN p,p2,m
 ![alt text](https://drive.google.com/uc?export=view&id=12Vyy__wPhh3h9Q-yPFqe1yFAy54TE3oc) 
 
 
-###Performance of French movies in USA and Russia
+### Performance of French movies in USA and Russia
 
 Here, we compare the ratings of `French` Movies released in USA and Russia. We can do this using the properties from Movies node and relationship between movies and countries. 
 
