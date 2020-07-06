@@ -28,16 +28,16 @@ Then:
 ```
 git clone https://github.com/bngom/Movie-Recommender-Engine.git
 cd Movie-Recommender-Engine
-pip install virtualenv # You may need to add the install
+pip install virtualenv
 virtualenv neoenv
-source neoenv/bin/activate
+neoenv\Scripts\activate.bat # source neoenv/bin/activate 
 pip install -r requirements.txt
 python app.py
 ```
 
 [http://localhost:5000](http://localhost:5000)
 
-The principal page shows a list of US movies from 90’s. This is a simple recommendation based on popularity of the movies. This list is fetched from Neo4j.
+The main page shows a list of US movies from 90’s. This is a simple recommendation based on popularity of the movies. This list is fetched from Neo4j.
 The pagination shows only 20 movies per page, you can navigate through the list. 
 You can log in or register to the application.  On registration the users are directly created in Neo4J.
 
