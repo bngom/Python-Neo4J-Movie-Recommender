@@ -3,7 +3,6 @@
   <div class="metanav">
   <a href="{{ url_for('main') }}">Home</a>
   {% if session.username %}
-    <a href="{{ url_for('profile', username=session.username) }}">Profile</a>
     <a href="{{ url_for('logout') }}">Logout</a>
   {% endif %}
   </div>
