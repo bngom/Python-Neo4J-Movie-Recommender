@@ -79,7 +79,3 @@ Click again on the button `Movies recommended to me`.
 The recommendations made are only based on the genre of movies liked by the user. We also used only Cypher queries. With some Machine Learning this could be made more advanced by applying collaborative filtering or doing a hybrid recommendation associating both content based and collaborative filtering.
 This also does not tackle when there is an unknown category of movies. 
 All these are points of amelioration that could be deployed.
-
-
-> Many thanks to Nicole White for her great tutorial that inspired us a lot.
-https://neo4j.com/blog/building-python-web-application-using-flask-neo4j/
