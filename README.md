@@ -1,5 +1,5 @@
 # Movie Recommender: with Neo4j and Flask
-A little [flask](https://palletsprojects.com/p/flask/) application with [Neo4j](http://neo4j.com/download/other-releases/) graph database. The aim is to generate recommendation base on movies liked by a user.
+A little [flask](https://palletsprojects.com/p/flask/) application with [Neo4j](http://neo4j.com/download/other-releases/) graph database. The aim is to generate recommendation based on movies liked by a user.
 
 ## Usage
 
