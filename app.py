@@ -1,10 +1,8 @@
 from models import User, get_page_items, get_pagination, get_movies
 from flask import Flask, request, session, redirect, url_for, render_template, flash
 
-
 app = Flask(__name__)
 app.secret_key = "super secret key"
-
 
 @app.route("/")
 def main():
@@ -14,7 +12,6 @@ def main():
     """
     page, per_page, offset = get_page_items()
     movies, total = get_movies(offset, per_page)
-
     pagination = get_pagination(page=page,
                                 per_page=per_page,  # results per page
                                 total=total,  # total number of results
@@ -29,7 +26,6 @@ def main():
                            per_page=per_page,
                            pagination=pagination
                            )
-
 
 @app.route("/showSignUp", methods=["GET","POST"])
 def showSignUp():
@@ -50,7 +46,6 @@ def showSignUp():
             session["username"] = username
             flash("Logged in.")
             return redirect(url_for("main"))
-
     return render_template("register.html")
 
 @app.route("/showSignIn", methods=["GET", "POST"])
@@ -65,7 +60,6 @@ def showSignIn():
             session["username"] = username
             flash("Logged in.")
             return redirect(url_for("main"))
-
     return render_template("login.html")
 
 
@@ -100,9 +94,7 @@ def like_movie(movieId):
     if not username:
         flash("You must be logged in to like a movie.")
         return redirect(url_for("login"))
-
     User(username).like_movie(movieId)
-
     flash("Liked movie.")
     return redirect(request.referrer)
 
@@ -110,16 +102,13 @@ def like_movie(movieId):
 def profile(username):
     logged_in_username = session.get("username")
     user_being_viewed_username = username
-
     user_being_viewed = User(user_being_viewed_username)
     movies = user_being_viewed.get_recommanded_movies()
-
     return render_template(
         "profile.html",
         username=username,
         posts=movies
     )
-
 
 if __name__ == "__main__":
     app.run()
