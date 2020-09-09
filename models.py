@@ -8,8 +8,6 @@ from flask import request
 
 
 url = os.environ.get("GRAPHENEDB_URL", "http://localhost:7474")
-#username = "Graph"
-#password = "passer"
 username = os.getenv("NEO4J_USERNAME")
 password = os.getenv("NEO4J_PASSWORD")
 
