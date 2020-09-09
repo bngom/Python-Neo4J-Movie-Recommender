@@ -62,7 +62,6 @@ def showSignIn():
             return redirect(url_for("main"))
     return render_template("login.html")
 
-
 @app.route("/engine")
 def recommenderEngine():
     """Based on movies category liked by the connected user a recommendation is generated"""
@@ -79,7 +78,6 @@ def logout():
     session.pop("username", None)
     flash("Logged out.")
     return redirect(url_for("main"))
-
 
 @app.route("/like_movie/<movieId>")
 def like_movie(movieId):
