@@ -1,9 +1,4 @@
 # **Imdb movies analysis with Neo4j**
-DSTI DE S20
-
-
-*   Barthelemy Diomaye NGOM
-*   Saifuddin Mohammad
 
 https://github.com/bngom/Movie-Recommender-Engine.git
 
